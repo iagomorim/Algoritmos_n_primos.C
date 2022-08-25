@@ -1,0 +1,22 @@
+#include <stdio.h>
+int i, num, soma=0;
+
+void verifica(){
+    
+   if(soma==2)
+     printf("Primo");
+    else
+     printf("Comum");
+ 
+}
+int main() {
+   
+  printf("Informe um numero "); 
+  scanf("%d",&num);
+    for(i=1;i<= num;i++){
+      if(num%i==0)
+        soma+=1;
+         
+  }
+  verifica();
+}  
