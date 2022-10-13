@@ -1,0 +1,81 @@
+/* ###################
+Iago Santos Amorim
+UNICARIOCA - TURMA 953 - ADS 
+Prof: Sérgio Monteiro - Programação estruturada
+
+###################*/
+#include <stdio.h>
+#include <string.h>
+#include <locale.h>
+
+struct Livro {
+   char  titulo[50];
+   char  autor[50];
+   char  assunto[100];
+   int   livro_id;
+}livro1, livro2;
+
+struct Livro entrada1();
+struct Livro entrada2();
+void imprimir1(struct Livro livro1); 
+void imprimir2(struct Livro livro2);
+
+int main( ) {
+	
+setlocale(LC_ALL, "portuguese-brazilian");
+
+struct Livro livro1;
+struct Livro livro2;
+
+         
+livro1=entrada1();
+livro2=entrada2();
+printf("############ LIVRO 1 ############ \n\n");
+imprimir1(livro1);
+printf("\n");
+printf("############ LIVRO 2 ############ \n\n");
+imprimir2(livro2);
+printf("\n");
+				  return 0;   
+}
+struct Livro entrada1(){
+	struct Livro livro1;
+/* ENTRADA DOS VALORES do livro 1 */
+
+
+   strcpy( livro1.titulo, "Programação em C");
+   strcpy( livro1.autor, "Sérgio Monteiro"); 
+   strcpy( livro1.assunto, "Passo a Passo de Programação em C");
+   livro1.livro_id = 1234567;
+   
+   return livro1;	
+} 
+struct Livro entrada2(){
+	struct Livro livro2;
+/* ENTRADA DOS VALORES do livro 2 */
+
+   strcpy( livro2.titulo, "Programação em Python");
+   strcpy( livro2.autor, "Sérgio Assunção");
+   strcpy( livro2.assunto, "Passo a Passo de Programação em Python");
+   livro2.livro_id = 789078890;
+ 
+ return livro2;	
+	
+}     
+void imprimir1(struct Livro livro1){
+/* exibição do Livro 01 */	
+	 printf( "Livro 1 titulo : %s\n", livro1.titulo);
+   printf( "Livro 1 autor : %s\n", livro1.autor);
+   printf( "Livro 1 assunto : %s\n", livro1.assunto);
+   printf( "Livro 1 Livro_id : %d\n", livro1.livro_id);
+
+}
+
+void imprimir2(struct Livro livro2){
+	
+/* exibição do Livro 02 */
+   printf( "Livro 2 titulo : %s\n", livro2.titulo);
+   printf( "Livro 2 autor : %s\n", livro2.autor);
+   printf( "Livro 2 assunto : %s\n", livro2.assunto);
+   printf( "Livro 2 Livro_id : %d\n", livro2.livro_id);
+} 
